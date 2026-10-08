@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "./shell.css";
+
+@font-face {
+  font-family: "JetBrains Mono Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 800;
+  src: url("@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2")
+    format("woff2-variations");
+}
+
+@theme {
+  --font-sans:
+    var(--font-marketing), ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-display: var(--font-marketing), ui-monospace, monospace;
+  --color-background: #000000;
+  --color-background-soft: #090909;
+  --color-surface: #171717;
+  --color-surface-strong: #e4007c;
+  --color-foreground: #f0f0f8;
+  --color-navy: #000000;
+  --color-navy-soft: #171717;
+  --color-primary: #e4007c;
+  --color-primary-light: #ff78bb;
+  --color-primary-dark: #a9005d;
+  --color-accent: #f5b90a;
+  --color-muted: rgb(240 240 248 / 0.64);
+  --color-line: rgb(240 240 248 / 0.18);
+  --color-success: #8bd450;
+  --color-danger: #fb7185;
+  --shadow-soft: 0 24px 70px -36px rgb(228 0 124 / 0.26);
+  --shadow-card: 0 24px 70px -42px rgb(0 0 0 / 0.9);
+}
