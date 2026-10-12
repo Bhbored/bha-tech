@@ -12,7 +12,7 @@ ENERGY 3 / RHYTHM 3 / MOTION 3. One moving sculpture, large editorial typography
 - System sans-serif gives headings a confident scale with no font download. Georgia italic adds a human counterpoint. A single self-hosted Latin JetBrains Mono file preserves the engineering character in section indices and artwork annotations.
 - A twisted copper ribbon represents a continuous, adaptable system. It is procedural canvas artwork, not a product screenshot. Its shape responds gently to pointer movement. Thin orbital outlines belong to the sculpture and the product connection diagram.
 - The Shabakat diagram visualizes the existing product's modules. It does not invent usage data or imply a real application screenshot.
-- The existing text logo and founder names remain. Monograms identify people without fabricated portraits. Product and service claims come from the repository's marketing data.
+- The transparent BHA mark appears in the navigation and footer, paired with a small TECH label. It stays blue in the light theme and switches to white for contrast in the dark theme. Founder names remain; monograms identify people without fabricated portraits. Product and service claims come from the repository's marketing data.
 - Full-width service disclosures keep seven capabilities scannable. Native details elements provide keyboard and touch interaction. The expanded content leads to the contact section.
 - Arrow icons indicate external destinations or movement to a section; plus icons indicate expandable content. There is no decorative icon grid.
 - The intro counter measures the entrance sequence, not downloaded bytes. The copper line emblem introduces the ribbon's geometry, then the page settles into place through a zoom-out and staggered text entrance.

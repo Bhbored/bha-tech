@@ -130,10 +130,6 @@ export function SiteIntro({ siteRef, onComplete }: SiteIntroProps) {
       className="site-intro"
       aria-label="Website introduction"
     >
-      <div className="intro-top">
-        <span>BHA TECH</span>
-        <span>Ideas into working software.</span>
-      </div>
       <div className="intro-center">
         <svg
           className="intro-emblem"
@@ -152,7 +148,6 @@ export function SiteIntro({ siteRef, onComplete }: SiteIntroProps) {
             />
           ))}
         </svg>
-        <p>Opening the studio</p>
         <div
           ref={progressRef}
           className="intro-percentage"
@@ -166,12 +161,17 @@ export function SiteIntro({ siteRef, onComplete }: SiteIntroProps) {
           <span className="intro-percent-sign">%</span>
         </div>
       </div>
-      <div className="intro-bottom">
-        <span>Independent minds. Connected systems.</span>
-        <button type="button" onClick={onComplete}>
-          Skip intro <span aria-hidden="true">↗</span>
-        </button>
-      </div>
+      <button
+        className="intro-skip"
+        type="button"
+        onClick={onComplete}
+        aria-label="Skip intro"
+        title="Skip intro"
+      >
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h13m-5-5 5 5-5 5" />
+        </svg>
+      </button>
       <div className="intro-progress-track" aria-hidden="true">
         <div className="intro-progress-fill" />
       </div>
