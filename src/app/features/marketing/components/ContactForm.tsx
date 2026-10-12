@@ -2,8 +2,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { AlertCircle, CheckCircle2, LoaderCircle } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { isContactApiConfigured, submitContactForm } from "@/app/shared/api/contact";
-import { contactSchema, type ContactFormData } from "@/app/shared/types/contact";
+import { isContactApiConfigured, submitContactForm } from "../api/contact";
+import { contactSchema, type ContactFormData } from "../types/contact";
 
 const serviceOptions = [
   "Custom Business System",

@@ -8,7 +8,9 @@ type PageMetaProps = {
 export function PageMeta({ title, description }: PageMetaProps) {
   useEffect(() => {
     document.title = title;
-    document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", description);
   }, [description, title]);
 
   return null;

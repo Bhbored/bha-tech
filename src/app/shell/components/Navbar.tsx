@@ -2,7 +2,7 @@ import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Logo } from "@/app/shared/components/Logo";
-import { navigation } from "@/app/shared/data/marketing";
+import { navigation } from "../navigation";
 import { useTheme } from "@/app/providers/useTheme";
 
 export function Navbar() {

@@ -1,3 +1,43 @@
+.footer-wordmark {
+  font-size: clamp(3.1rem, 14vw, 13rem);
+  font-weight: 700;
+  letter-spacing: -0.09em;
+  line-height: 0.9;
+  padding-block: 3rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.footer-top,
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.footer-top {
+  padding-top: 3rem;
+}
+.footer-top p,
+.footer-bottom {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+.footer-bottom {
+  padding-block: 1.5rem;
+}
+.footer-bottom nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-bottom a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.footer-bottom a:hover {
+  color: var(--color-accent);
+}
+
 html {
   scrollbar-gutter: stable;
 }

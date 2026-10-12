@@ -1,6 +1,6 @@
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Reveal } from "@/app/features/marketing/components/Reveal";
+import { Reveal } from "@/app/shared/components/Reveal";
 import { Logo } from "@/app/shared/components/Logo";
 
 export function Footer() {

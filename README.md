@@ -4,22 +4,27 @@ Independent Vite frontend for the public BHA Tech website. It contains no authen
 
 ## Commands
 
-- `pnpm install`
-- `pnpm dev`
-- `pnpm lint`
-- `pnpm typecheck`
-- `pnpm test --run`
-- `pnpm build`
+- `pnpm install` installs dependencies from the lockfile.
+- `pnpm dev` starts the Vite development server.
+- `pnpm lint` checks application, configuration, and test code.
+- `pnpm typecheck` checks TypeScript without emitting files.
+- `pnpm test --run` runs isolated unit tests in `tests/unit/`.
+- `pnpm test:browser` starts a local server and runs Playwright tests in `tests/e2e/`.
+- `pnpm build` creates the production bundle in `dist/`.
+
+## Project structure
+
+`src/app/features/marketing/` owns the homepage sections, content, contact API, and types. `src/app/features/legal/` owns the legal pages. Route definitions live in `src/app/routes/`; site navigation and framing live in `src/app/shell/`; app-wide state lives in `src/app/providers/`; reusable components live in `src/app/shared/`. Global CSS is split by concern under `src/styles/`.
 
 ## Browser checks
 
-With `pnpm dev` running, run `pnpm test:browser`. The checks cover six viewport sizes, both themes, navigation, service disclosures, contact fields, motion preferences, and automated WCAG accessibility scans. Screenshots are saved in the ignored `artifacts/` directory.
+Run `pnpm test:browser`; Playwright starts and stops its own Vite server. The checks cover six viewport sizes, both themes, navigation, service disclosures, contact fields, motion preferences, and automated WCAG accessibility scans. Screenshots are saved in the ignored `artifacts/playwright/` directory.
 
 The runner uses installed Microsoft Edge by default. Set `BROWSER_CHANNEL=chrome` to use installed Chrome, or install a supported Playwright browser. Set `PREVIEW_URL` to test a different local preview URL.
 
 ## Visual system
 
-See `DESIGN.md` for the design direction and motion budget. The hero uses a procedural canvas ribbon with no external assets. It pauses offscreen, in hidden tabs, and for reduced-motion preferences. Company and product content lives in `src/app/shared/data/marketing.ts`.
+See `DESIGN.md` for the design direction and motion budget. The hero uses a procedural canvas ribbon with no external assets. It pauses offscreen, in hidden tabs, and for reduced-motion preferences. Company and product content lives in `src/app/features/marketing/data/marketing.ts`.
 
 Refresh `/` to see the percentage intro and hero entrance. The sequence takes about 2.3 seconds; Skip and Escape dismiss it. Reduced-motion preferences and direct section links bypass it. The navbar contracts when scrolling down and expands when scrolling up. Intro, navigation, and footer styling lives in `src/styles/shell.css`.
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { contactSchema } from "@/app/shared/types/contact";
+import { contactSchema } from "@/app/features/marketing/types/contact";
 
 const validContact = {
   fullName: "BHA Tech Contact",

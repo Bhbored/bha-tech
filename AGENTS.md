@@ -1,7 +1,21 @@
 # Repository Guidelines
 
-This is a Vite + React + TypeScript public website. Keep product code under `src/app/`: `features/` for page domains, `routes/` for route definitions, `shell/` for the public site frame, `providers/` for app-wide state, and `shared/` for reusable UI, data, API code, and types. Global styles belong in `src/styles/`.
+## Scope and project structure
 
-Use pnpm. Before handoff, run `pnpm lint`, `pnpm typecheck`, `pnpm test --run`, and `pnpm build`.
+This repository is the public BHA Tech website, built with Vite, React, and TypeScript. Its routes are `/`, `/privacy`, and `/terms`. Keep application code under `src/app/`: `features/marketing/` owns homepage sections, content, contact API, and types; `features/legal/` owns legal pages; `routes/` defines URLs; `shell/` owns navigation, intro, and footer; `providers/` holds app-wide state; `shared/` holds components used across features. Put global CSS in `src/styles/`, grouped by concern. Keep unit tests in `tests/unit/` and browser tests in `tests/e2e/`.
 
-The public route surface is `/`, `/privacy`, and `/terms`. Do not add login, internal dashboard, authentication, Prisma, or server code to this repository.
+Do not add authentication, an internal dashboard, Prisma, or server code here. The contact form uses an external API configured with `VITE_API_BASE_URL`; never commit secrets or a production endpoint as a default.
+
+## Commands
+
+Use pnpm and keep `pnpm-lock.yaml` in sync with dependency changes. Run `pnpm dev` for local development and `pnpm build` for a production bundle. Before handoff, run `pnpm lint`, `pnpm typecheck`, `pnpm test --run`, and `pnpm build`.
+
+Run `pnpm test:browser` when changing navigation, animations, responsive layout, accessibility, or form behavior. Playwright starts its own Vite server, uses headless Microsoft Edge by default, and writes artifacts under `artifacts/playwright/`. Set `BROWSER_CHANNEL=chrome` to use installed Chrome or `PREVIEW_URL` to target another running site.
+
+## Code and design conventions
+
+Use two-space indentation, TypeScript for application logic, PascalCase for React components, and camelCase for functions and data. Keep feature-specific code within its feature; move a component to `shared/` only when another feature or the shell uses it. Prefer the existing React, GSAP, and CSS patterns over adding a dependency for a small effect. Read `DESIGN.md` before changing the visual direction. Respect reduced-motion preferences, keyboard access, both themes, and small screens. Use relevant guidance from `.agents/skills/` for the task at hand.
+
+## Tests and reviews
+
+Name Vitest files `*.test.ts` and Playwright files `*.spec.ts`. Add tests for changed behavior rather than duplicating implementation details. Browser tests should use isolated contexts and avoid relying on execution order. The Git history is too short to establish a strict commit format; use a short, descriptive imperative subject. In pull requests, describe user-visible changes, include the checks run, link a related issue when one exists, and attach screenshots for visual changes.
