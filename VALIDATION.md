@@ -9,4 +9,4 @@
 
 ## Delivery notes
 
-The public routes are `/`, `/privacy`, and `/terms`. The contact form requires `VITE_API_BASE_URL` and a running backend before it can deliver messages. Browser checks validate the unavailable state when no endpoint is configured; they do not submit a message. Real-device and other browser-engine testing remain outside this validation. `AGENTS.md` remains unchanged.
+The public routes are `/`, `/privacy`, and `/terms`. The contact form requires `VITE_API_BASE_URL` and a running backend before it can deliver messages. Browser checks validate the unavailable state when no endpoint is configured; they do not submit a message. Real-device and other browser-engine testing remain outside this validation. Repository guidelines live in `.cursor/rules/repository.mdc`.
