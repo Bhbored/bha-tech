@@ -1,0 +1,35 @@
+---
+description: Commit subjects use a type prefix such as feat, refact, fix, or bug
+alwaysApply: true
+---
+
+# Commit messages
+
+Use one subject line:
+
+```
+type: imperative summary
+```
+
+Leave a space after the colon. Keep the summary short, specific, and in the imperative. Do not end it with a period.
+
+| Prefix | Use for |
+| --- | --- |
+| `feat:` | A new user-visible capability |
+| `refact:` | A restructure that keeps behavior the same |
+| `fix:` | A correction to broken behavior |
+| `bug:` | A reported defect |
+| `docs:` | Documentation only |
+| `test:` | Tests only |
+| `style:` | Formatting or visual polish without a logic change |
+| `perf:` | A performance improvement |
+| `chore:` | Tooling, config, or maintenance |
+
+```
+feat: add the Shabakat product panel
+refact: extract product styles into product.css
+fix: keep the logo mark visible in the light theme
+bug: stop the contact form accepting a short message
+```
+
+Pick the prefix that matches the change. When a commit mixes types, use the prefix for the change a reviewer would notice first.
