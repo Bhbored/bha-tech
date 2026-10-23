@@ -27,3 +27,19 @@ test("reduced motion stops artwork and hides its control", async ({ page }) => {
   expect(await snapshot(canvas)).toBe(still);
   await expect(page.getByRole("button", { name: "Pause motion" })).toBeHidden();
 });
+
+test("the product panel reveals every Shabakat capability", async ({ page }) => {
+  await page.goto("/#products");
+  const section = page.locator("#products");
+  await section.scrollIntoViewIfNeeded();
+  await expect(section.locator(".product-showcase")).toHaveCSS("opacity", "1");
+  await expect(section.locator(".product-capability")).toHaveCount(6);
+  await expect(section.locator(".product-capability").last()).toHaveCSS(
+    "opacity",
+    "1",
+  );
+  await expect(section.getByRole("link", { name: "Explore Shabakat" })).toHaveAttribute(
+    "href",
+    "https://shabakatlb.com",
+  );
+});

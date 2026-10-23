@@ -18,7 +18,12 @@ describe("contactSchema", () => {
   });
 
   it("requires consent and a meaningful message", () => {
-    expect(contactSchema.safeParse({ ...validContact, consent: false }).success).toBe(false);
-    expect(contactSchema.safeParse({ ...validContact, message: "Too short" }).success).toBe(false);
+    expect(
+      contactSchema.safeParse({ ...validContact, consent: false }).success,
+    ).toBe(false);
+    expect(
+      contactSchema.safeParse({ ...validContact, message: "Too short" })
+        .success,
+    ).toBe(false);
   });
 });

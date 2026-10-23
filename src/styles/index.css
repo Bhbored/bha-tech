@@ -2,6 +2,7 @@
 @source "../app";
 @import "./theme.css";
 @import "./marketing.css";
+@import "./product.css";
 @import "./legal.css";
 @import "./shell.css";
 

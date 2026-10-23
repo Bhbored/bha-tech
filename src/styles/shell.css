@@ -162,24 +162,26 @@ html[data-intro="playing"] {
   min-height: 44px;
   color: var(--color-foreground);
 }
-.brand-logo img {
+.brand-logo-mark {
   display: block;
   width: 78px;
-  height: auto;
-  filter: brightness(0) invert(1);
+  aspect-ratio: 1991 / 789;
+  background: linear-gradient(110deg, #f36d42, #ff926d);
+  -webkit-mask: url("/bha-mark-transparent.png") center / contain no-repeat;
+  mask: url("/bha-mark-transparent.png") center / contain no-repeat;
 }
-.brand-logo span {
+.brand-logo > span:last-child {
   font: 700 0.66rem var(--font-mono);
   letter-spacing: 0.16em;
 }
-.site-footer .brand-logo img {
+.site-footer .brand-logo-mark {
   width: 108px;
 }
-.site-footer .brand-logo span {
+.site-footer .brand-logo > span:last-child {
   font-size: 0.82rem;
 }
-html.light .brand-logo img {
-  filter: none;
+html.light .brand-logo-mark {
+  background: linear-gradient(110deg, #94270e, #b93617);
 }
 .site-header.is-scrolled {
   background: color-mix(in srgb, var(--color-background) 96%, transparent);

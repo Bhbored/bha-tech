@@ -7,12 +7,7 @@ export function Logo() {
       className="brand-logo"
       aria-label="BHA Tech home"
     >
-      <img
-        src="/bha-mark-transparent.png"
-        alt=""
-        width="1991"
-        height="789"
-      />
+      <span className="brand-logo-mark" aria-hidden="true" />
       <span>TECH</span>
     </Link>
   );
